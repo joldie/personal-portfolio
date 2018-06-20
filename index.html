@@ -42,7 +42,11 @@
 
     <section id="welcome-section">
       <div>
-        <h1 class="welcome-name">joldie</h1>
+        <h1 class="welcome-name">
+          <span>j
+            <span id="welcome-name-part-2">oldie</span>
+          </span>
+        </h1>
         <div class="welcome-text">
           <h2>web</h2>
           <h2>developer, etc</h2>
@@ -60,7 +64,9 @@
           ...
         </p>
       </div>
-      <img id="about-img" src="images/developer.svg" alt="Web developer">
+      <div id="about-img-div">
+        <img id="about-img" src="images/developer.png" alt="Web developer">
+      </div>
     </section>
 
     <section id="projects">
@@ -94,8 +100,23 @@
     </section>
 
     <section id="contact">
-      <h2>Contact Me</h2>
-
+      <div id="form-div">
+        <form>
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Write a message..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div id="contact-div">
+        <h2>Contact Me</h2>
+        <p>
+          Questions, comments, feedback?
+        </p>
+        <p>
+          Let's talk!
+        </p>
+      </div>
     </section>
 
   </main>

@@ -10,6 +10,7 @@
 :root {
   /* Variable declarations */
   --main-txt-color: #333;
+  --alt-txt-color: #388e3c;
   --main-bg-color: #fff;
   --fixed-header-height: 40px;
 }
@@ -42,12 +43,14 @@ a {
 /* Class and individual element styling */
 
 header {
-  background-color: var(--main-bg-color);
+  background-color: var(--alt-txt-color);
+  color: var(--main-bg-color);
   position: fixed;
   text-align: center;
   height: var(--fixed-header-height);
   width: 100%;
   z-index: 1000;
+  /*border-bottom: 2px solid var(--alt-txt-color);*/
 }
 
 #navbar {
@@ -89,18 +92,25 @@ section h2 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  /*padding: 30px;
+  border: 1px solid var(--main-txt-color);*/
 }
 
 .welcome-name {
-  display: inline;
   font-size: 12vw;
+  letter-spacing: -3px;
+  white-space: nowrap;
 }
 
-.welcome-name span {
-  display: inline;
+#welcome-name-part-2 {
+  position: relative;
+  right: 3.3vw;
+  text-decoration: underline;
+  text-decoration-color: var(--alt-txt-color);
 }
 
 .welcome-text {
+  /*color: var(--alt-txt-color);*/
   font-size: 2vw;
   text-align: left;
   padding-left: 4vw;
@@ -119,13 +129,21 @@ section h2 {
 }
 
 #about h2 {
-  border-bottom: 1px solid var(--main-txt-color);
+  border-bottom: 3px solid var(--alt-txt-color);
   margin-bottom: 15px;
 }
 
 #about-div {
   text-align: left;
   width: 100%;
+}
+
+#about-img-div {
+  width: 100%;
+}
+
+#about-img {
+  width: 60%;
 }
 
 #projects {
@@ -137,6 +155,10 @@ section h2 {
   padding-top: calc(var(--fixed-header-height) + 20px);
 }
 
+#projects h2 {
+  border-bottom: 3px solid var(--alt-txt-color);
+}
+
 .tile-container {
   display: grid;
   grid-gap: 40px;
@@ -146,6 +168,7 @@ section h2 {
 }
 
 .project-tile {
+  background-color: var(--main-bg-color);
   box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.3);
   position: relative;
   transition: all 0.3s ease;
@@ -173,13 +196,68 @@ section h2 {
 }
 
 #contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   margin: 5%;
+}
+
+#contact-div {
+  text-align: right;
+  width: 100%;
+}
+
+#contact h2 {
+  border-bottom: 3px solid var(--alt-txt-color);
+  margin-bottom: 15px;
+}
+
+#form-div {
+  width: 100%;
+}
+
+#contact form {
+  width: 100%;
+  padding: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 80px;
+  font-size: 1.1em;
+}
+
+button[type="submit"] {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--alt-txt-color);
+  border-radius: 4px;
+  border: 0px solid;
+  color: var(--main-bg-color);
+  font-size: 0.9em;
+  height: 35px;
+  width: 80px;
 }
 
 footer {
   padding: 10px;
   text-align: center;
   font-size: 80%;
+  background-color: var(--alt-txt-color);
+  color: var(--main-bg-color);
+  /*border-top: 1px solid var(--alt-txt-color);*/
 }
 
 /* Media queries */
@@ -189,14 +267,34 @@ footer {
     font-size: 80%;
   }
   .welcome-name {
-    font-size: 18vw;
+    font-size: 17vw;
+  }
+  #welcome-name-part-2 {
+    right: 4.1vw;
   }
   .welcome-text {
     font-size: 3vw;
+    padding-left: 6vw;
+  }
+  #about h2,
+  #projects h2,
+  #contact h2 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 0.9em;
   }
   #about {
     flex-direction: column;
     padding-top: calc(var(--fixed-header-height) + 20px);
+  }
+  #contact {
+    flex-direction: column-reverse;
+    padding-top: calc(var(--fixed-header-height) + 20px);
+    text-align: left;
+  }
+  #contact form {
+    padding: 0px;
   }
 }
 
@@ -234,4 +332,3 @@ footer {
 * * * * * * * * {
   outline: 1px solid blue;
 }
-*/
