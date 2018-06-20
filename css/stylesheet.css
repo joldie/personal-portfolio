@@ -1,0 +1,237 @@
+/* Global styling */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Variable declarations */
+  --main-txt-color: #333;
+  --main-bg-color: #fff;
+  --fixed-header-height: 40px;
+}
+
+html {
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  /* Makes text more crisp, clear on all browsers: */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Class and individual element styling */
+
+header {
+  background-color: var(--main-bg-color);
+  position: fixed;
+  text-align: center;
+  height: var(--fixed-header-height);
+  width: 100%;
+  z-index: 1000;
+}
+
+#navbar {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#navbar ul li {
+  padding: 10px 20px;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  min-height: 100vh;
+}
+
+section h2 {
+  padding-bottom: 10px;
+}
+
+#welcome-section {
+  position: relative;
+}
+
+#welcome-section>div {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-name {
+  display: inline;
+  font-size: 12vw;
+}
+
+.welcome-name span {
+  display: inline;
+}
+
+.welcome-text {
+  font-size: 2vw;
+  text-align: left;
+  padding-left: 4vw;
+}
+
+.welcome-text h2 {
+  padding-bottom: 0;
+}
+
+#about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+
+#about h2 {
+  border-bottom: 1px solid var(--main-txt-color);
+  margin-bottom: 15px;
+}
+
+#about-div {
+  text-align: left;
+  width: 100%;
+}
+
+#projects {
+  margin: 5%;
+}
+
+#projects,
+#contact {
+  padding-top: calc(var(--fixed-header-height) + 20px);
+}
+
+.tile-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.project-tile {
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tile-image {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Following settings keep image width:height ratio fixed.
+   16:9 ratio --> 9/16 = 0.5625 */
+  height: 0;
+  padding-bottom: 56.25%;
+  width: 100%;
+}
+
+.tile-title {
+  font-weight: bold;
+  margin: 0;
+  padding: 8px;
+}
+
+#contact {
+  margin: 5%;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 80%;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 700px) {
+  #navbar ul {
+    font-size: 80%;
+  }
+  .welcome-name {
+    font-size: 18vw;
+  }
+  .welcome-text {
+    font-size: 3vw;
+  }
+  #about {
+    flex-direction: column;
+    padding-top: calc(var(--fixed-header-height) + 20px);
+  }
+}
+
+/* For debugging only: */
+
+/*
+* {
+  outline: 2px dotted red;
+}
+
+* * {
+  outline: 2px dotted green;
+}
+
+* * * {
+  outline: 2px dotted orange;
+}
+
+* * * * {
+  outline: 2px dotted blue;
+}
+
+* * * * * {
+  outline: 1px solid red;
+}
+
+* * * * * * {
+  outline: 1px solid green;
+}
+
+* * * * * * * {
+  outline: 1px solid orange;
+}
+
+* * * * * * * * {
+  outline: 1px solid blue;
+}
+*/
