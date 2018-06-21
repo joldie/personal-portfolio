@@ -58,14 +58,11 @@
       <div id="about-div">
         <h2>About Me</h2>
         <p>
-          I'm a novice web developer, ...
-        </p>
-        <p>
-          ...
+          I'm a web developer, with plenty yet to learn.
         </p>
       </div>
       <div id="about-img-div">
-        <img id="about-img" src="images/developer.png" alt="Web developer">
+        <img id="about-img" src="images/dilbert.png" alt="Web developer">
       </div>
     </section>
 
@@ -74,25 +71,25 @@
       <div class="tile-container">
         <a href="https://codepen.io/joldie/full/oyZOYq" target="_blank">
           <div class="project-tile">
-            <div class="tile-image" style="background-image: url('images/tribute-page.png')"></div>
+            <div class="tile-image" title="Tribute Page" style="background-image: url('images/tribute-page.png')"></div>
             <div class="tile-title">Tribute Page</div>
           </div>
         </a>
         <a href="https://codepen.io/joldie/full/qKmwyx" target="_blank">
           <div class="project-tile">
-            <div class="tile-image" style="background-image: url('images/survey-form.png')"></div>
+            <div class="tile-image" title="Survey Form" style="background-image: url('images/survey-form.png')"></div>
             <div class="tile-title">Survey Form</div>
           </div>
         </a>
         <a href="https://codepen.io/joldie/full/JZJVdK" target="_blank">
           <div class="project-tile">
-            <div class="tile-image" style="background-image: url('images/product-landing-page.png')"></div>
+            <div class="tile-image" title="Product Landing Page" style="background-image: url('images/product-landing-page.png')"></div>
             <div class="tile-title">Product Landing Page</div>
           </div>
         </a>
         <a href="https://codepen.io/joldie/full/NzaPKy" target="_blank">
           <div class="project-tile">
-            <div class="tile-image" style="background-image: url('images/technical-documentation-page.png')"></div>
+            <div class="tile-image" title="Technical Docs Page" style="background-image: url('images/technical-documentation-page.png')"></div>
             <div class="tile-title">Technical Docs Page</div>
           </div>
         </a>
@@ -100,22 +97,26 @@
     </section>
 
     <section id="contact">
-      <div id="form-div">
-        <form>
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Write a message..."></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div id="contact-div">
+      <div>
         <h2>Contact Me</h2>
-        <p>
-          Questions, comments, feedback?
-        </p>
-        <p>
-          Let's talk!
-        </p>
+        <div id="contact-container">
+          <div id="form-div">
+            <form>
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Your email" required>
+              <textarea name="message" placeholder="Write a message..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div id="contact-div">
+            <p>
+              Questions, comments, feedback?
+            </p>
+            <p>
+              Let's talk!
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -123,8 +124,10 @@
 
   <footer>
     Made by
-    <a href=" https://github.com/joldie/ " target="_blank ">joldie</a> as a project for the
-    <a href="https://learn.freecodecamp.org/ " target="_blank ">freeCodeCamp</a> Responsive Web Design course
+    <a id="profile-link" href="https://github.com/joldie/" target="_blank ">joldie</a> as a project for the
+    <a href="https://learn.freecodecamp.org/" target="_blank ">freeCodeCamp</a> Responsive Web Design course
+    <br> Image credit:
+    <a href="http://dilbert.com/" target="_blank">Dilbert by Scott Adams</a>
   </footer>
 
 </body>

@@ -50,7 +50,6 @@ header {
   height: var(--fixed-header-height);
   width: 100%;
   z-index: 1000;
-  /*border-bottom: 2px solid var(--alt-txt-color);*/
 }
 
 #navbar {
@@ -92,8 +91,6 @@ section h2 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*padding: 30px;
-  border: 1px solid var(--main-txt-color);*/
 }
 
 .welcome-name {
@@ -110,7 +107,6 @@ section h2 {
 }
 
 .welcome-text {
-  /*color: var(--alt-txt-color);*/
   font-size: 2vw;
   text-align: left;
   padding-left: 4vw;
@@ -143,7 +139,8 @@ section h2 {
 }
 
 #about-img {
-  width: 60%;
+  width: 100%;
+  transform: scaleX(-1);
 }
 
 #projects {
@@ -196,19 +193,31 @@ section h2 {
 }
 
 #contact {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  position: relative;
   margin: 5%;
+  text-align: right;
+}
+
+#contact>div {
+  width: 100%;
+}
+
+#contact-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #contact-div {
   text-align: right;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 #contact h2 {
+  width: 50%;
+  margin-left: 50%;
   border-bottom: 3px solid var(--alt-txt-color);
   margin-bottom: 15px;
 }
@@ -225,6 +234,7 @@ section h2 {
 input[type="text"],
 input[type="email"],
 textarea {
+  font-family: inherit;
   width: 100%;
   padding: 5px;
   margin-top: 10px;
@@ -234,8 +244,8 @@ textarea {
 }
 
 textarea {
-  height: 80px;
-  font-size: 1.1em;
+  height: 100px;
+  font-size: 0.9em;
 }
 
 button[type="submit"] {
@@ -257,7 +267,6 @@ footer {
   font-size: 80%;
   background-color: var(--alt-txt-color);
   color: var(--main-bg-color);
-  /*border-top: 1px solid var(--alt-txt-color);*/
 }
 
 /* Media queries */
@@ -289,46 +298,17 @@ footer {
     padding-top: calc(var(--fixed-header-height) + 20px);
   }
   #contact {
-    flex-direction: column-reverse;
     padding-top: calc(var(--fixed-header-height) + 20px);
-    text-align: left;
+    text-align: right;
+  }
+  #contact h2 {
+    width: 100%;
+    margin-left: 0;
+  }
+  #contact-container {
+    flex-direction: column-reverse;
   }
   #contact form {
     padding: 0px;
   }
-}
-
-/* For debugging only: */
-
-/*
-* {
-  outline: 2px dotted red;
-}
-
-* * {
-  outline: 2px dotted green;
-}
-
-* * * {
-  outline: 2px dotted orange;
-}
-
-* * * * {
-  outline: 2px dotted blue;
-}
-
-* * * * * {
-  outline: 1px solid red;
-}
-
-* * * * * * {
-  outline: 1px solid green;
-}
-
-* * * * * * * {
-  outline: 1px solid orange;
-}
-
-* * * * * * * * {
-  outline: 1px solid blue;
 }
