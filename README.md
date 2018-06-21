@@ -1,6 +1,6 @@
-# Project Name
+# Personal Portfolio Page
 
-Project Name Page project for [freeCodeCamp](https://www.freecodecamp.org/) course.
+Personal Portfolio Page project for [freeCodeCamp](https://www.freecodecamp.org/) course.
 
 ## Description
 
